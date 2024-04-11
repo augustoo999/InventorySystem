@@ -2,17 +2,37 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WeaponMana : MonoBehaviour
+public class WeaponMana : Weapon
 {
-    // Start is called before the first frame update
-    void Start()
+    public int Mp;
+    public WeaponManaDTO WeaponManaDTO;
+
+    private void Start()
     {
-        
+        ManageDTO();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void ManageDTO()
     {
-        
+        ItemName = WeaponManaDTO.ItemName;
+        ItemDescription = WeaponManaDTO.ItemDescription;
+        ItemLevel = WeaponManaDTO.ItemLevel;
+        Mp = WeaponManaDTO.Mp;
+        ItemType = WeaponManaDTO.ItemType;
+    }
+
+    public override int GetHp()
+    {
+        return 0;
+    }
+
+    public override int GetMp()
+    {
+        return Mp;
+    }
+
+    public override ItemDTO GetScriptable()
+    {
+        return WeaponManaDTO;
     }
 }
