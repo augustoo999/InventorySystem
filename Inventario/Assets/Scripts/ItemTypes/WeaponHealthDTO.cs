@@ -2,17 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WeaponHealthDTO : MonoBehaviour
+[CreateAssetMenu(fileName = "Weapon Health", menuName = "Item/Weapon/Weapon Health")]
+public class WeaponHealthDTO : WeaponDTO
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public int Hp;
 }

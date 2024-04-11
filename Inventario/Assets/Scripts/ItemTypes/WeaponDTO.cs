@@ -6,5 +6,4 @@ using UnityEngine;
 public class WeaponDTO : EquipableDTO
 {
     public int Damage;
-    public int Hp;
 }
