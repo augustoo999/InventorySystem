@@ -2,17 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Weapon : MonoBehaviour
+public abstract class Weapon : Item 
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public int Damage;
 
-    // Update is called once per frame
-    void Update()
+    public override int GetDamage()
     {
-        
+        return Damage;
     }
 }
