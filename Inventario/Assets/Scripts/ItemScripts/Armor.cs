@@ -2,17 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Armor : MonoBehaviour
+public abstract class Armor : Item
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public int Mp;
 
-    // Update is called once per frame
-    void Update()
+    public override int GetMp()
     {
-        
+        return Mp;
     }
 }
