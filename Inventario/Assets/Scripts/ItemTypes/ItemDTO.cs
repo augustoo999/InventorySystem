@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ItemScriptable : ScriptableObject
+public class ItemDTO : ScriptableObject
 {
     public ItemType ItemType;
     public string ItemName;

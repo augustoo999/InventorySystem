@@ -15,5 +15,5 @@ public abstract class Item : MonoBehaviour
 
     public abstract int GetMp();
 
-    public abstract ItemScriptable GetScriptable();
+    public abstract ItemDTO GetScriptable();
 }

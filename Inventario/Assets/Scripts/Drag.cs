@@ -31,6 +31,6 @@ public class Drag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHand
     public void OnPointerClick(PointerEventData eventData)
     {
         var item = gameObject.GetComponent<Item>();
-        FindObjectOfType<>
+        FindObjectOfType<InfoBoxManager>().SetScriptable(item.GetScriptable(), item.GetDamage(), item.GetMp(), item.GetHp());
     }
 }
