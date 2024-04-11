@@ -7,5 +7,5 @@ public class ItemDTO : ScriptableObject
     public ItemType ItemType;
     public string ItemName;
     public string ItemDescription;
-    public string ItemLevel;
+    public int ItemLevel;
 }
