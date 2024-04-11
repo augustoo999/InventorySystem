@@ -19,6 +19,16 @@ public class Slots : MonoBehaviour, IDropHandler
         {
             var dropped = eventData.pointerDrag;
             var draggableItem = dropped.GetComponent<Drag>();
+            draggableItem.ParentAfDrag = transform;
+        }
+        else if (transform.childCount == 1 && eventData.pointerDrag.GetComponent<Item>().ItemType == SlotType && !isInventory)
+        {
+            var draggableItem = eventData.pointerDrag.GetComponent<Drag>();
+            var initialSlot = draggableItem.ParentAfDrag;
+            var destinySlot = transform.GetChild(0).GetComponent<Drag>().ParentAfDrag;
+
+            transform.GetChild(0).SetParent(initialSlot);
+            draggableItem.ParentAfDrag = destinySlot;
         }
     }
 }

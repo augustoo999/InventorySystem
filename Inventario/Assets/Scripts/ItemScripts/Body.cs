@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Body : Armor
+public class Body : Armor
 {
     public int Hp;
     public BodyDTO bodyDTO;
